@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pagestyles %}
+    <link href="{{ url_for('static', filename='dist/css/home.min.css') }}" rel="stylesheet" type="text/css"></link>
+
+{% endblock %}
+{% block nav %}
+    {% include "navbar.html" %}
+{% endblock %}
+{% block content %}
+    <div id="home" class="page"
+         style="background-image: url({{ url_for('home_bp.static', filename='images/mountainbackground.jpg') }});">
+        <div class="content">
+            <div class="title">
+                <p>Laud&nbsp;</p>
+                <p>&nbsp;William</p>
+            </div>
+            <div class="sub-title">
+                <p>I am</p>
+                <p class="bolded">&nbsp;a&nbsp;<span>web developer</span></p>
+            </div>
+            <div class="hidden">
+                <p>a<span>web developer</span></p>
+                <p>a<span>blogger</span></p>
+                <p>a<span>gamer</span></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='dist/js/home.min.js') }}" type="text/javascript" rel="script"></script>
+{% endblock %}

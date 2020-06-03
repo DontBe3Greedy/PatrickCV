@@ -1,0 +1,26 @@
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  font-family: Poppins;
+  text-align: center;
+}
+
+.page {
+  flex-grow: 2;
+}
+
+.hover__green {
+  color: #5ac24e !important;
+  cursor: pointer;
+}
+
+
+.menu-info_show {
+  display: block !important;
+}
+

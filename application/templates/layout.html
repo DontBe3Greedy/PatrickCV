@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>{{ title }}</title>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <meta name="theme-color" content="#5eb9d7"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='dist/img/favicon.png') }}" type="image/x-icon"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet"
+          href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,500" rel="stylesheet">
+    <link href="{{ url_for('static', filename='dist/css/style.min.css') }}" rel="stylesheet" type="text/css"></link>
+    {% block pagestyles %}{% endblock %}
+</head>
+<body class="{{ template }}">
+<div class="container">
+    {% block nav %}{% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+</div>
+
+<!-- Scripts -->
+<script src="{{ url_for('static', filename='dist/css/main.min.css') }}" type="text/javascript" rel="script"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>
